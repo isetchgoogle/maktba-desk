@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>640</width>
-    <height>480</height>
+    <height>481</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -129,7 +129,10 @@ border:none;
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <property name="spacing">
-           <number>0</number>
+           <number>9</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
           </property>
           <item>
            <widget class="QLabel" name="label">
@@ -338,6 +341,9 @@ border:none;
              <property name="fieldGrowthPolicy">
               <enum>QFormLayout::ExpandingFieldsGrow</enum>
              </property>
+             <property name="rowWrapPolicy">
+              <enum>QFormLayout::DontWrapRows</enum>
+             </property>
              <property name="labelAlignment">
               <set>Qt::AlignCenter</set>
              </property>
@@ -452,7 +458,7 @@ border:none;
          </layout>
         </widget>
        </item>
-       <item>
+       <item alignment="Qt::AlignTop">
         <widget class="QFrame" name="main_body_contents">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -464,7 +470,7 @@ border:none;
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="reserve_page">
              <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -492,7 +498,7 @@ border:none;
                   </widget>
                  </item>
                  <item alignment="Qt::AlignRight">
-                  <widget class="QFrame" name="reserve_search">
+                  <widget class="QFrame" name="reserve_search_frame">
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -570,7 +576,7 @@ border:none;
             <widget class="QWidget" name="emprunte_page">
              <layout class="QVBoxLayout" name="verticalLayout_9">
               <item>
-               <widget class="QFrame" name="frame">
+               <widget class="QFrame" name="empunte_header_frame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -593,7 +599,7 @@ border:none;
                   </widget>
                  </item>
                  <item alignment="Qt::AlignRight">
-                  <widget class="QFrame" name="frame_3">
+                  <widget class="QFrame" name="emprunte_search_frame">
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -602,7 +608,7 @@ border:none;
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_13">
                     <item>
-                     <widget class="QLineEdit" name="emprunte_lineEdit">
+                     <widget class="QLineEdit" name="emprunte_search_lineEdit">
                       <property name="placeholderText">
                        <string>Rechercher..</string>
                       </property>
@@ -626,7 +632,7 @@ border:none;
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_2">
+               <widget class="QFrame" name="empunte_table_frame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -635,7 +641,7 @@ border:none;
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_10">
                  <item>
-                  <widget class="QTableWidget" name="tableWidget">
+                  <widget class="QTableWidget" name="emprunte_table">
                    <property name="maximumSize">
                     <size>
                      <width>526</width>
@@ -674,7 +680,113 @@ border:none;
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="CRUD_page"/>
+            <widget class="QWidget" name="CRUD_page">
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QFrame" name="CRUD_header_frame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item alignment="Qt::AlignLeft">
+                  <widget class="QLabel" name="CRUD_page_label">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>CRUD page</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignRight">
+                  <widget class="QFrame" name="CRUD_search_frame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_11">
+                    <item>
+                     <widget class="QLineEdit" name="CRUD_search_lineEdit">
+                      <property name="placeholderText">
+                       <string>Rechercher..</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="CRUD_search_btn">
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>icons/search.png</normaloff>icons/search.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="CRUD_table_frame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item>
+                  <widget class="QTableWidget" name="CRUD_table">
+                   <property name="maximumSize">
+                    <size>
+                     <width>526</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <column>
+                    <property name="text">
+                     <string>Livre</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Reference</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Etudiant</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>CIN</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Date</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
           </item>
          </layout>
