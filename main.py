@@ -3,7 +3,7 @@ import os
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 
-from PyQt5.QtWidgets import QApplication, QMainWindow, QStackedWidget, QWidget,QTableWidgetItem
+from PyQt5.QtWidgets import QApplication, QMainWindow, QStackedWidget, QWidget,QTableWidgetItem ,QPushButton
 from PySide2 import *
 from qt_material import *
 
@@ -79,7 +79,6 @@ class MainWindow(QMainWindow):
         self.reserve_table.setColumnWidth(4,100)
         self.reserve_table.setColumnWidth(5,100)
 
-
         #local_data
         books=[{"Livre":"Jdddohn","Référence":45,"Etudiant":"Nddddew York","CIN":"123456","Date":"Londzzzn"}, {"Livre":"Mazzzrk", "Référence":40,"Etudiant":"LzzzA","CIN":"123458","Date":"Lodon"},
                 {"Livre":"Gedddorge","Référence":30,"Etudiant":"Loddddndon","CIN":"123457","Date":"Lzzzodon"}]
@@ -91,8 +90,21 @@ class MainWindow(QMainWindow):
             self.reserve_table.setItem(row, 2, QTableWidgetItem(book["Etudiant"]))
             self.reserve_table.setItem(row, 3, QTableWidgetItem(book["CIN"]))
             self.reserve_table.setItem(row, 4, QTableWidgetItem(book["Date"]))
-            row=row+1        
+            
+#BUTTON each row that calls handleButtonClicked function
 
+            self.btn_sell = QPushButton('Edit')
+            self.btn_sell.clicked.connect(self.handleButtonClicked)
+            self.reserve_table.setCellWidget(row, 5,self.btn_sell)
+
+            row=row+1        
+#function related to the button in tables but stills doesn't run well
+#I will try to fix it, when completed I will make it in the other tables
+
+    def handleButtonClicked(self):
+        index = self.reserve_table.indexAt(self.btn_sell.pos())
+        if index.isValid():
+            print(index.row(),index.column())
 
 
 

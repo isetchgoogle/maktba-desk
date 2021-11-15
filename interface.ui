@@ -572,6 +572,11 @@ border:none;
                      <string>Date</string>
                     </property>
                    </column>
+                   <column>
+                    <property name="text">
+                     <string>buttons</string>
+                    </property>
+                   </column>
                   </widget>
                  </item>
                 </layout>
