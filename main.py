@@ -68,7 +68,18 @@ class MainWindow(QMainWindow):
             self.emprunte_table.setItem(row, 2, QTableWidgetItem(book["Etudiant"]))
             self.emprunte_table.setItem(row, 3, QTableWidgetItem(book["CIN"]))
             self.emprunte_table.setItem(row, 4, QTableWidgetItem(book["Date"]))
-            row=row+1 
+            self.emprunteBtn = QPushButton('restoré')
+            self.emprunteBtn.clicked.connect(self.emprunteButtonTable)
+            self.emprunte_table.setCellWidget(row, 5,self.emprunteBtn)
+
+            row=row+1        
+
+    def emprunteButtonTable(self):
+        button = self.sender()
+        index = self.emprunte_table.indexAt(button.pos())
+        if index.isValid():
+            print(index.row(), index.column())
+ 
     
 
     def resrve(self):
@@ -91,17 +102,15 @@ class MainWindow(QMainWindow):
             self.reserve_table.setItem(row, 3, QTableWidgetItem(book["CIN"]))
             self.reserve_table.setItem(row, 4, QTableWidgetItem(book["Date"]))
             
-#BUTTON each row that calls handleButtonClicked function
+#BUTTON each row that calls reserveButtonTable function
 
-            self.btn_sell = QPushButton('Edit')
-            self.btn_sell.clicked.connect(self.handleButtonClicked)
-            self.reserve_table.setCellWidget(row, 5,self.btn_sell)
+            self.reserveBtn = QPushButton('emprunté')
+            self.reserveBtn.clicked.connect(self.reserveButtonTable)
+            self.reserve_table.setCellWidget(row, 5,self.reserveBtn)
 
             row=row+1        
-#function related to the button in tables but stills doesn't run well
-#I will try to fix it, when completed I will make it in the other tables
 
-    def handleButtonClicked(self):
+    def reserveButtonTable(self):
         button = self.sender()
         index = self.reserve_table.indexAt(button.pos())
         if index.isValid():
