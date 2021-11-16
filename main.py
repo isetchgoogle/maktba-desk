@@ -102,9 +102,10 @@ class MainWindow(QMainWindow):
 #I will try to fix it, when completed I will make it in the other tables
 
     def handleButtonClicked(self):
-        index = self.reserve_table.indexAt(self.btn_sell.pos())
+        button = self.sender()
+        index = self.reserve_table.indexAt(button.pos())
         if index.isValid():
-            print(index.row(),index.column())
+            print(index.row(), index.column())
 
 
 
