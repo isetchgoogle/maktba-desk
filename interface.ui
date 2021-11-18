@@ -44,7 +44,8 @@ border:none;
     <item alignment="Qt::AlignTop">
      <widget class="QFrame" name="header_frame">
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: #F8EDEB;
+</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -100,6 +101,9 @@ border:none;
               <weight>75</weight>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
              <string>    Menu</string>
@@ -262,6 +266,9 @@ border:none;
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #BCAAA4;</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
       </property>
@@ -299,7 +306,7 @@ border:none;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">background-color: #F8EDEB;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -330,6 +337,9 @@ border:none;
               <width>200</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #F8EDEB;</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -460,6 +470,9 @@ border:none;
        </item>
        <item alignment="Qt::AlignTop">
         <widget class="QFrame" name="main_body_contents">
+         <property name="styleSheet">
+          <string notr="true">background-color: #BCAAA4;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>

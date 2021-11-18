@@ -11,7 +11,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super (MainWindow, self).__init__()
         loadUi("interface.ui" , self)
-        apply_stylesheet(app, theme='dark_cyan.xml')
+        apply_stylesheet(app, theme='light_black.xml')
         #self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         #self.centralwidget.setGraphicsEffect(self.shadow)
         self.setWindowTitle("fuck")
@@ -70,6 +70,7 @@ class MainWindow(QMainWindow):
             self.emprunte_table.setItem(row, 4, QTableWidgetItem(book["Date"]))
             self.emprunteBtn = QPushButton('restoré')
             self.emprunteBtn.clicked.connect(self.emprunteButtonTable)
+            
             self.emprunte_table.setCellWidget(row, 5,self.emprunteBtn)
 
             row=row+1        
