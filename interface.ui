@@ -110,7 +110,7 @@ border:none;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>icons/menu-button-of-three-horizontal-lines.png</normaloff>icons/menu-button-of-three-horizontal-lines.png</iconset>
+              <normaloff>../.designer/backup/icons/menu-button-of-three-horizontal-lines.png</normaloff>../.designer/backup/icons/menu-button-of-three-horizontal-lines.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -150,7 +150,7 @@ border:none;
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap>icons/book.png</pixmap>
+             <pixmap>../.designer/backup/icons/book.png</pixmap>
             </property>
            </widget>
           </item>
@@ -429,6 +429,16 @@ border:none;
                </property>
               </widget>
              </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="crud_label">
+               <property name="text">
+                <string>CRUD Livres</string>
+               </property>
+               <property name="margin">
+                <number>7</number>
+               </property>
+              </widget>
+             </item>
              <item row="2" column="0">
               <widget class="QPushButton" name="crud_btn">
                <property name="sizePolicy">
@@ -449,16 +459,6 @@ border:none;
                  <width>40</width>
                  <height>50</height>
                 </size>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLabel" name="crud_label">
-               <property name="text">
-                <string>CRUD Livres</string>
-               </property>
-               <property name="margin">
-                <number>7</number>
                </property>
               </widget>
              </item>
@@ -483,7 +483,7 @@ border:none;
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="reserve_page">
              <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -533,7 +533,7 @@ border:none;
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/search.png</normaloff>icons/search.png</iconset>
+                        <normaloff>../.designer/backup/icons/search.png</normaloff>../.designer/backup/icons/search.png</iconset>
                       </property>
                      </widget>
                     </item>
@@ -645,7 +645,7 @@ border:none;
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/search.png</normaloff>icons/search.png</iconset>
+                        <normaloff>../.designer/backup/icons/search.png</normaloff>../.designer/backup/icons/search.png</iconset>
                       </property>
                      </widget>
                     </item>
@@ -757,7 +757,7 @@ border:none;
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>icons/search.png</normaloff>icons/search.png</iconset>
+                        <normaloff>../.designer/backup/icons/search.png</normaloff>../.designer/backup/icons/search.png</iconset>
                       </property>
                      </widget>
                     </item>
@@ -777,6 +777,51 @@ border:none;
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_7">
                  <item>
+                  <widget class="QFrame" name="frame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_15">
+                    <property name="spacing">
+                     <number>50</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="creat_CRUD">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: white;</string>
+                      </property>
+                      <property name="text">
+                       <string>creat</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="update_CRUD">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: white;</string>
+                      </property>
+                      <property name="text">
+                       <string>update</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="delete_CRUD">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: white;</string>
+                      </property>
+                      <property name="text">
+                       <string>delete</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QTableWidget" name="CRUD_table">
                    <property name="maximumSize">
                     <size>
@@ -786,12 +831,12 @@ border:none;
                    </property>
                    <column>
                     <property name="text">
-                     <string>Livre</string>
+                     <string>CIN</string>
                     </property>
                    </column>
                    <column>
                     <property name="text">
-                     <string>Reference</string>
+                     <string>Date</string>
                     </property>
                    </column>
                    <column>
@@ -801,12 +846,12 @@ border:none;
                    </column>
                    <column>
                     <property name="text">
-                     <string>CIN</string>
+                     <string>Livre</string>
                     </property>
                    </column>
                    <column>
                     <property name="text">
-                     <string>Date</string>
+                     <string>Référence</string>
                     </property>
                    </column>
                   </widget>
@@ -888,7 +933,7 @@ border:none;
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap>icons/club.png</pixmap>
+             <pixmap>../.designer/backup/icons/club.png</pixmap>
             </property>
            </widget>
           </item>
